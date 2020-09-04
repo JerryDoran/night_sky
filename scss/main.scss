@@ -56,12 +56,11 @@ body {
 }
 
 /******************************** SHOWCASE SECTION ************************************/
+
 .max-height {
   min-height: calc(100vh);
-
   // Create a yellow overlay
-  background: linear-gradient($black-trans, $black-trans),
-    url('/images/landing.jpg');
+  background: black !important;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -226,8 +225,8 @@ body {
 
 /******************************** CONTACT SECTION **********************************/
 .contact {
-  min-height: 100vh;
-  background: url('/images/contact.jpg') center/cover fixed no-repeat;
+  height: 100vh;
+  background: $black-trans;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -269,7 +268,7 @@ footer {
   background: $main-black;
   padding: 60px 0;
   text-align: center;
-  margin-top: -50px;
+  margin-top: -100px;
 
   .footer-icons a {
     display: inline-block;
