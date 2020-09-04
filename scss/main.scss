@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import 'config';
+
+/********************************** PAGE RESETS *************************************/
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/******************************** NAVBAR SECTION ************************************/
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.navbar-brand {
+  color: $primary-color !important;
+  font-weight: bold;
+}
+
+#myNavbar li {
+  padding: 0 15px;
+  font-weight: bold;
+}
+
+#myNavbar a:hover {
+  color: $primary-color;
+  @include easeIn();
+}
+
+.search-button {
+  border-color: $primary-color;
+  color: $primary-color;
+
+  &:hover {
+    background-color: $secondary-black;
+    border-color: $primary-color;
+    color: white;
+    outline: none;
+  }
+}
+
+.main-section {
+  min-height: calc(100vh - 56px);
+}
+
+/******************************** SHOWCASE SECTION ************************************/
+.max-height {
+  min-height: calc(100vh);
+
+  // Create a yellow overlay
+  background: linear-gradient($black-trans, $black-trans),
+    url('/images/landing.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 2;
+}
+
+.showcase {
+  color: $main-white;
+  margin-top: -4rem;
+
+  .showcase-link {
+    font-size: 1.5rem;
+    color: $main-white;
+    border: 0.2rem solid $primary-color;
+    border-radius: 50%;
+    padding: 5px 30px;
+
+    &:hover {
+      background: $secondary-black;
+      color: $primary-color;
+    }
+  }
+}
+
+/******************************** ABOUT SECTION ************************************/
+#about {
+  min-height: 100vh;
+}
+
+.about-image-container {
+  position: relative;
+
+  // Use a pseudo selector to create an outline around the image
+  &::before {
+    // Always have to have a content property when using a pseudo selector!!!!
+    content: '';
+    position: absolute;
+    top: -1.5rem;
+    left: -1.7rem;
+    width: 100%;
+    height: 100%;
+    outline: 0.5rem solid $primary-color;
+    z-index: -1;
+    @include easeIn();
+  }
+
+  &:hover::before {
+    top: 0;
+    left: 0;
+  }
+}
+
+/******************************** GALLERY SECTION ************************************/
+#gallery {
+  background: $main-grey;
+
+  .search-box {
+    background: $primary-color;
+    color: $main-white;
+  }
+
+  .image-container {
+    // This will serve as the parent container for the search icon which we will position absolute
+    // within this container
+    position: relative;
+
+    // This will prevent the image from overflowing the container when it is zoomed in on
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .gallery-img {
+    @include easeInOut();
+  }
+}
+
+.image-container:hover .gallery-img {
+  transform: scale(1.2);
+}
+
+.single-item {
+  @include easeIn();
+
+  &:hover {
+    box-shadow: 0 10px 15px rgb(0, 0, 0);
+  }
+}
+
+.gallery-item-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 3rem;
+  transform: translate(-50%, -50%);
+  color: $main-black;
+  opacity: 0;
+  @include easeInOut();
+
+  &:hover {
+    color: $main-white;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+/******************************** CONSTELLATIONS SECTION ************************************/
+#constellations {
+  background: $main-white;
+
+  .search-box {
+    background: $primary-color;
+    color: $main-white;
+  }
+
+  .image-container {
+    // This will serve as the parent container for the search icon which we will position absolute
+    // within this container
+    position: relative;
+
+    // This will prevent the image from overflowing the container when it is zoomed in on
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .gallery-img {
+    @include easeInOut();
+  }
+}
+
+.image-container:hover .gallery-img {
+  transform: scale(1.2);
+}
+
+.single-item {
+  @include easeIn();
+
+  &:hover {
+    box-shadow: 0 10px 15px rgb(0, 0, 0);
+  }
+}
+
+.gallery-item-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 3rem;
+  transform: translate(-50%, -50%);
+  color: $main-black;
+  opacity: 0;
+  @include easeInOut();
+
+  &:hover {
+    color: $main-white;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+/******************************** CONTACT SECTION **********************************/
+.contact {
+  min-height: 100vh;
+  background: url('/images/contact.jpg') center/cover fixed no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .contact-card {
+    /* use this property for children of parent containers - in this case the parent is .contact */
+    /* the parent container .contact must have display: flex */
+    flex: 0 0 80%;
+    padding: 40px 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    form {
+      /* use this property for children of parent containers - in this case the parent is .contact-card */
+      /* the parent container .contact-card must have display: flex */
+      flex: 0 0 60%;
+      display: flex;
+      flex-direction: column;
+
+      p {
+        margin: 10px 0;
+        color: $main-grey;
+        text-align: center;
+      }
+
+      h3 {
+        text-align: center;
+        text-transform: uppercase;
+        color: $main-grey;
+      }
+    }
+  }
+}
+
+/********************************** FOOTER SECTION ***************************************/
+footer {
+  background: $main-black;
+  padding: 60px 0;
+  text-align: center;
+  margin-top: -50px;
+
+  .footer-icons a {
+    display: inline-block;
+    font-size: 30px;
+    margin: 0 30px 20px 30px;
+    padding: 2px 5px;
+    border-radius: 5px;
+    background: $main-white;
+    color: $main-black;
+    transition: all 0.5s ease-in;
+
+    &:hover {
+      background: $primary-color;
+    }
+  }
+
+  p {
+    color: $main-grey;
+    font-size: 20px;
+  }
+}
+
+/******************************** MODAL SECTION ************************************/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .modal-content {
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    width: 80%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalOpen;
+    animation-duration: 1.5s;
+  }
+
+  .modal-header {
+    background: $secondary-black;
+    padding: 15px;
+    color: $main-white;
+    text-transform: capitalize;
+
+    h2 {
+      margin: 0;
+      font-size: medium;
+    }
+
+    .close-btn {
+      color: $main-white;
+      float: right;
+      font-size: 30px;
+
+      &:hover {
+        color: $main-black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      &:focus {
+        color: $main-black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 600px) {
+  .modal-content {
+    max-width: 70%;
+
+    .modal-header h2 {
+      font-size: x-large;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .modal-content {
+    max-width: 70%;
+  }
+
+  .modal-header h2 {
+    font-size: 90px;
+  }
+}
+
+@media (min-width: 776px) {
+  .astronomy-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .astronomy-container .astronomy-item:nth-of-type(1) {
+    order: 1;
+  }
+
+  .astronomy-container .astronomy-item:nth-of-type(2) {
+    order: 2;
+  }
+
+  .astronomy-container .astronomy-item:nth-of-type(3) {
+    order: 4;
+  }
+
+  .astronomy-container .astronomy-item:nth-of-type(4) {
+    order: 3;
+  }
+}

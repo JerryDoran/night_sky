@@ -1,0 +1,76 @@
+{
+  "planets": [
+    {
+      "id": 1,
+      "name": "mercury",
+      "distance": "57,909,227 km",
+      "diameter": "4,879 km",
+      "orbit": "88 days",
+      "type": "terrestrial",
+      "moons": 0
+    },
+    {
+      "id": 2,
+      "name": "venus",
+      "distance": "108,209,475 km",
+      "diameter": "12,104 km",
+      "orbit": "225 days",
+      "type": "terrestrial",
+      "moons": 0
+    },
+    {
+      "id": 3,
+      "name": "earth",
+      "distance": "149,598,262 km",
+      "diameter": "12,742 km",
+      "orbit": "365 days",
+      "type": "terrestrial",
+      "moons": 1
+    },
+    {
+      "id": 4,
+      "name": "mars",
+      "distance": "227,943,824 km",
+      "diameter": "6,779 km",
+      "orbit": "1.9 years",
+      "type": "terrestrial",
+      "moons": 2
+    },
+    {
+      "id": 5,
+      "name": "jupiter",
+      "distance": "778,340,821 km",
+      "diameter": "139,822 km",
+      "orbit": "11.9 years",
+      "type": "gas giant",
+      "moons": 79
+    },
+    {
+      "id": 6,
+      "name": "saturn",
+      "distance": "1,426,667,000",
+      "diameter": "116,464 km",
+      "orbit": "29.5 years",
+      "type": "gas giant",
+      "moons": 82
+    },
+    {
+      "id": 7,
+      "name": "uranus",
+      "distance": "2,870,658,186 km",
+      "diameter": "50,724 km",
+      "orbit": "84 years",
+      "type": "gas giant",
+      "moons": 27
+    },
+    {
+      "id": 8,
+      "name": "neptune",
+      "distance": "4,498,396,441 km",
+      "diameter": "49,244 km",
+      "orbit": "165 years",
+      "type": "gas giant",
+      "moons": 14
+    }
+  ]
+}

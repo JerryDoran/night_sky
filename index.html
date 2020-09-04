@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>The Planets</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="dist/css/main.min.css" />
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/6f92449565.js"></script>
+  </head>
+  <body>
+   <div class="main-section">
+    <header id="header">
+      <!------------------------------- BRAND AND NAVBAR SECTION ------------------------------>
+      <nav class="navbar navbar-expand-lg bg-light navbar-light">
+        <a class="navbar-brand" href="#">The Night Sky</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#myNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#home"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          
+        </div>
+      </nav>
+      <!----------------------------------- BANNER SECTION ----------------------------------->
+      <div class="container-fluid" id="home">
+          <div class="row max-height justify-content-center align-items-center">
+            <div class="col-10 mx-auto showcase text-center">
+              <h1 class="text-capitalize">
+                Tour the <strong class="site-titles">night sky</strong>
+              </h1>
+              <a href="#gallery" class="btn showcase-link text-uppercase my-2 px-10"
+                >explore</a
+              >
+            </div>
+          </div>
+    </header>
+
+    <!----------------------------------- ABOUT SECTION ----------------------------------->
+    <section class="about py-5" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 my-5 align-self-center">
+            <h1 class="text-capitalize">
+              about my <strong class="site-titles">site</strong>
+            </h1>
+            <p class="my-4 text-muted w-75">This site provides some basic statistics about the planets in our solar system</p>
+          </div>
+          <div class="col-sm-10 col-md-6 mx-auto my-5 align-self-center">
+            <div class="about-image-container">
+              <!-- Make sure the image is responsive by using class 'img-fluid' -->
+              <img src="images/jupiter.jpg" class="img-fluid" alt="" />
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----------------------------------- GALLERY SECTION ----------------------------------->
+    <section id="gallery" class="gallery py-5">
+      <div class="container">
+        <!-- Title -->
+        <div class="row">
+          <div class="col-10 mx-auto col-sm-6 text-center">
+            <h1 class="text-capitalize">
+              our <strong class="site-titles">gallery</strong>
+            </h1>
+          </div>
+        </div>
+
+        <!-- Gallery Items -->
+        <div class="row gallery-items" id="gallery-items">
+          <!-- A single item -->
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 gallery-item planets" data-item="planets">
+            <div class="card single-item">
+              <div class="image-container" data-id="1">
+                <img src="images/mercury.jpg" alt="planet img" class="card-img-top gallery-img">
+                
+              </div>
+              <div class="card-body">
+                <div class="card-text d-flex justify-content-between text-capitalize">
+                  <h5 id="gallery-item-name">mercury</h5>
+                  <h5 class="gallery-item-rank">
+                    <strong id="distance-from-sun" class="font-weight-bold">1</strong>
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- A single item -->
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 gallery-item planets" data-item="planets">
+              <div class="card single-item">
+                <div class="image-container" data-id="2">
+                  <img src="images/venus.jpg" alt="planet img" class="card-img-top gallery-img">
+                  
+                </div>
+                <div class="card-body">
+                  <div class="card-text d-flex justify-content-between text-capitalize">
+                    <h5 id="gallery-item-name">venus</h5>
+                    <h5 class="gallery-item-rank">
+                      <strong id="distance-from-sun" class="font-weight-bold">2</strong>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- A single item -->
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 gallery-item planets" data-item="planets">
+              <div class="card single-item">
+                <div class="image-container" data-id="3">
+                  <img src="images/earth.jpg" alt="planet img" class="card-img-top gallery-img">
+                  
+                </div>
+                <div class="card-body">
+                  <div class="card-text d-flex justify-content-between text-capitalize">
+                    <h5 id="gallery-item-name">earth</h5>
+                    <h5 class="gallery-item-rank">
+                      <strong id="distance-from-sun" class="font-weight-bold">3</strong>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- A single item -->
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 gallery-item planets" data-item="planets">
+              <div class="card single-item">
+                <div class="image-container" data-id="4">
+                  <img src="images/mars.jpg" alt="planet img" class="card-img-top gallery-img">
+                  
+                </div>
+                <div class="card-body">
+                  <div class="card-text d-flex justify-content-between text-capitalize">
+                    <h5 id="gallery-item-name">mars</h5>
+                    <h5 class="gallery-item-rank">
+                      <strong id="distance-from-sun" class="font-weight-bold">4</strong>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- A single item -->
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 gallery-item planets" data-item="planets">
+              <div class="card single-item">
+                <div class="image-container" data-id="5">
+                  <img src="images/jupiter.jpg" alt="planet img" class="card-img-top gallery-img">
+                  
+                </div>
+                <div class="card-body">
+                  <div class="card-text d-flex justify-content-between text-capitalize">
+                    <h5 id="gallery-item-name">jupiter</h5>
+                    <h5 class="gallery-item-rank">
+                      <strong id="distance-from-sun" class="font-weight-bold">5</strong>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- A single item -->
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 gallery-item planets" data-item="planets">
+              <div class="card single-item">
+                <div class="image-container" data-id="6">
+                  <img src="images/saturn.jpg" alt="planet img" class="card-img-top gallery-img">
+                  
+                </div>
+                <div class="card-body">
+                  <div class="card-text d-flex justify-content-between text-capitalize">
+                    <h5 id="gallery-item-name">saturn</h5>
+                    <h5 class="gallery-item-rank">
+                      <strong id="distance-from-sun" class="font-weight-bold">6</strong>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- A single item -->
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 gallery-item planets" data-item="planets">
+              <div class="card single-item" >
+                <div class="image-container" data-id="7">
+                  <img src="images/uranus.jpg" alt="planet img" class="card-img-top gallery-img">
+                  
+                </div>
+                <div class="card-body">
+                  <div class="card-text d-flex justify-content-between text-capitalize">
+                    <h5 id="gallery-item-name">uranus</h5>
+                    <h5 class="gallery-item-rank">
+                      <strong id="distance-from-sun" class="font-weight-bold">7</strong>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- A single item -->
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 gallery-item planets" data-item="planets">
+              <div class="card single-item" >
+                <div class="image-container" data-id="8">
+                  <img src="images/neptune.jpg" alt="planet img" class="card-img-top gallery-img">
+                  
+                </div>
+                <div class="card-body">
+                  <div class="card-text d-flex justify-content-between text-capitalize">
+                    <h5 id="gallery-item-name">neptune</h5>
+                    <h5 class="gallery-item-rank">
+                      <strong id="distance-from-sun" class="font-weight-bold">8</strong>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+        </div>
+      </div>
+    <!----------------------------------- SUMMER VIEWING SECTION ----------------------------------->
+    <section id="constellations" class="constellations py-5">
+      <div class="container">
+        <!-- Title -->
+        <div class="row">
+          <div class="col-10 mx-auto col-sm-6 text-center">
+            <h1 class="text-capitalize">
+              summer <strong class="site-titles">viewing</strong>
+            </h1>
+          </div>
+        </div>
+
+        <!-- Constellations Items -->
+        <div class="row constellations-items" id="constellations-items">
+          <!-- A single item -->
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 gallery-item planets" data-item="planets">
+            <div class="card single-item">
+              <div class="image-container" data-id="1">
+                <img src="images/aquila.jpeg" alt="aquila" height="254" class="card-img-top gallery-img">
+                
+              </div>
+              
+            </div>
+          </div>
+          <!-- A single item -->
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 gallery-item planets" data-item="planets">
+              <div class="card single-item">
+                <div class="image-container" data-id="2">
+                  <img src="images/cygnus.jpeg" alt="cygnus" height="254" class="card-img-top gallery-img">
+                  
+                </div>
+                
+              </div>
+            </div>
+            <!-- A single item -->
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 gallery-item planets" data-item="planets">
+              <div class="card single-item">
+                <div class="image-container" data-id="3">
+                  <img src="images/draco.jpeg" alt="draco" height="254" class="card-img-top gallery-img">
+                  
+                </div>
+                
+              </div>
+            </div>
+            <!-- A single item -->
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 gallery-item planets" data-item="planets">
+              <div class="card single-item">
+                <div class="image-container" data-id="4">
+                  <img src="images/hercules.jpeg" alt="hercules" height="254" class="card-img-top gallery-img">
+                  
+                </div>
+                
+              </div>
+            </div>
+            <!-- A single item -->
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 gallery-item planets" data-item="planets">
+              <div class="card single-item">
+                <div class="image-container" data-id="5">
+                  <img src="images/lyra.jpeg" alt="lyra" height="254" class="card-img-top gallery-img">
+                  
+                </div>
+                
+              </div>
+            </div>
+            <!-- A single item -->
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 gallery-item planets" data-item="planets">
+              <div class="card single-item">
+                <div class="image-container" data-id="6">
+                  <img src="images/sagitta.jpeg" alt="sagitta" height="254" class="card-img-top gallery-img">
+                  
+                </div>
+                
+              </div>
+            </div>
+            
+            
+        </div>
+      </div>
+       <!----------------------------------- CONTACT SECTION ----------------------------------->
+       <section class="contact" id="contact">
+         <article class="contact-card">
+           <form>
+             <h3>contact me</h3>
+             <p>Bailey Doran</p>
+            <p>Email: bndoran@ysu.edu</p> 
+           </form>
+         </article>
+       </section>
+      </div>
+       <!----------------------------------- FOOTER SECTION -------------------------------->
+    <footer>
+      
+      <p>Copyright&copy; ThePlanets. All rights reserved</p>
+    </footer>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          
+        </div>
+      </div>
+    </section>
+  
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

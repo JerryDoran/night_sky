@@ -1,0 +1,24 @@
+$primary-color: #ad343e;
+$main-white: #fff;
+$main-black: #0d1317;
+$secondary-black: #474747;
+$main-grey: rgb(238, 238, 238);
+$black-trans: rgba(0, 0, 0, 0.3);
+
+.site-titles {
+  font-size: 4rem;
+  color: $primary-color;
+}
+
+/************************************ GLOBAL MIXINs **************************************/
+@mixin easeIn {
+  transition: all 0.5s ease-in;
+}
+
+@mixin easeInOut {
+  transition: all 1s ease-in-out;
+}
+
+@mixin astronomyEaseIn {
+  transition: transform 2s;
+}
