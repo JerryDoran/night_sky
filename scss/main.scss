@@ -261,6 +261,7 @@ body {
 
   .card {
     height: 25rem;
+    border-radius: 0.5rem;
   }
 
   .card-img-wrapper {
@@ -275,7 +276,7 @@ body {
     height: 100%;
     object-fit: cover;
     opacity: 0.8;
-    border-radius: 0.5rem;
+    border-radius: .5rem;
     transition: opacity 0.5s;
   }
 
@@ -292,6 +293,14 @@ body {
 
   .card-info h3 {
     color: #c29525;
+  }
+
+  .card-info a {
+    text-decoration: none;
+    color: $main-grey;
+    background: $primary-color;
+    padding: 5px 10px;
+    border-radius: 5px;
   }
 
   .card:hover .card-info {
