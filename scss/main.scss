@@ -70,6 +70,7 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   overflow: hidden;
+  position: relative;
 }
 
 .img-wrapper img {
@@ -276,7 +277,7 @@ body {
     height: 100%;
     object-fit: cover;
     opacity: 0.8;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     transition: opacity 0.5s;
   }
 
@@ -347,6 +348,31 @@ body {
   &:hover {
     opacity: 1;
   }
+}
+
+// Asteroids section
+.asteroids {
+  margin-bottom: 5rem;
+}
+.asteroids h1 {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.asteroid-text {
+  color: #f4f4f4;
+  background: transparent;
+  line-height: 2;
+}
+
+.content-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  background: transparent;
+}
+
+// Telescopes
+.telescope h1 {
 }
 
 /******************************** CONTACT SECTION **********************************/
