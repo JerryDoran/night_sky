@@ -415,6 +415,15 @@ body {
   }
 }
 
+// Mars Weather
+.mars-weather {
+  margin: 0 auto;
+  background-color: $primary-color;
+  color: $main-grey;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
 /********************************** FOOTER SECTION ***************************************/
 footer {
   background: $main-black;
@@ -527,6 +536,12 @@ footer {
 
   .modal-header h2 {
     font-size: 90px;
+  }
+}
+
+@media (max-width: 800px) {
+  .asteroid-text {
+    margin-left: 4rem;
   }
 }
 
